@@ -9,14 +9,20 @@ export const Home = () => {
   return (
     <div className="home-display">
       <h1>Welcome to trip Advisor</h1>
-      <h2>top continents for your next holiday</h2>
+      <h2 className="second-title">top continents for your next holiday</h2>
       {trip.map((items) => {
         const { id, image, loaction } = items;
         return (
-          <div onClick={() => navigate(`/details/${id}`)} key={id}>
-            <img src={image} />
-            <span class="material-symbols-outlined">location_on</span>{" "}
-            <p>{loaction}</p>
+          <div
+            className="display-container"
+            onClick={() => navigate(`/details/${id}`)}
+            key={id}
+          >
+            <img className="image-trip" src={image} />
+            <div className="loaction">
+              <span class="material-symbols-outlined">location_on</span>{" "}
+              <p>{loaction}</p>
+            </div>
           </div>
         );
       })}
