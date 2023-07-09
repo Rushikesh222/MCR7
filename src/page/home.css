@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(46 45 45);
   color: white;
 }
 .home-display {
@@ -10,6 +10,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.name {
+  padding: 40px;
 }
 .second-title {
   color: rgb(55, 92, 243);

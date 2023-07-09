@@ -11,10 +11,9 @@ export const Details = () => {
   const [data, setData] = useState(
     trip.filter((items) => parseInt(items.id) === parseInt(id))
   );
-  console.log(data, id);
 
   return (
-    <div>
+    <div className="details-container">
       {data.map((list) => {
         const {
           id,
@@ -28,38 +27,37 @@ export const Details = () => {
           image,
         } = list;
         return (
-          <div key={id} className="detials data">
-            <h1>{name}</h1>
-            <div>
-              {" "}
-              <img src={image} alt="image" />
-            </div>
+          <div key={id} className="detials-data">
+            <h1 className="name">{name}</h1>
+            <div className="info">
+              <img className="detials-image" src={image} alt="image" />
 
-            <div>
-              <p>
-                <strong>Description:</strong>
-                {Description}
-              </p>
-              <p>
-                <strong>Rating:</strong>
-                {rating}
-              </p>
-              <p>
-                <strong>Review:</strong>
-                {review}
-              </p>
-              <p>
-                <strong>Loaction:</strong>
-                {loaction}
-              </p>
-              <p>
-                <strong>Openning Hours:</strong>
-                {openHour}
-              </p>
-              <p>
-                <strong>Ticket price:</strong>
-                {price}
-              </p>
+              <div className="content">
+                <p>
+                  <strong>Description:</strong>
+                  {Description}
+                </p>
+                <p>
+                  <strong>Rating:</strong>
+                  {rating}
+                </p>
+                <p>
+                  <strong>Review:</strong>
+                  {review}
+                </p>
+                <p>
+                  <strong>Loaction:</strong>
+                  {loaction}
+                </p>
+                <p>
+                  <strong>Openning Hours:</strong>
+                  {openHour}
+                </p>
+                <p>
+                  <strong>Ticket price:</strong>
+                  {price}
+                </p>
+              </div>
             </div>
           </div>
         );
