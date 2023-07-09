@@ -23,16 +23,34 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  margin: 20px;
 }
 .image-trip {
-  width: 400px;
-  height: 100px;
+  width: 250px;
+  height: 300px;
   border: 1px solid white;
   border-radius: 20px;
 }
 .loaction {
   bottom: 0;
-
+  left: 10%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-self: flex-start;
   position: absolute;
   background-color: transparent;
+}
+.material-symbols-outlined {
+  background-color: transparent;
+}
+.location-text {
+  background-color: transparent;
+}
+.second-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
